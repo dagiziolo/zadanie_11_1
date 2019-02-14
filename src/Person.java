@@ -5,15 +5,10 @@ public class Person {
     private String pesel;
 
     public Person(String firstName, String lastName, int age, String pesel) throws NameUndefinedException, IncorrectAgeException {
-        if (firstName == null || lastName == null || firstName.length() < 2 || lastName.length() < 2) {
-            throw new NameUndefinedException();
-        } else if (age < 1) {
-            throw new IncorrectAgeException();
-        } else
-            this.firstName = firstName;
-        this.lastName = lastName;
-        this.age = age;
-        this.pesel = pesel;
+        setFirstName(firstName);
+        setLastName(lastName);
+        setAge(age);
+        setPesel(pesel);
     }
 
     public String getFirstName() {
